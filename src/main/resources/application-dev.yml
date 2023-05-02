@@ -1,0 +1,52 @@
+spring:
+  datasource:
+    username: root
+    password: Welcome@01
+    url: jdbc:mysql://localhost/unt_store
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        globally_quoted_identifiers: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: arunthotakuri@gmail.com
+    password: Welcome@01
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+jwt:
+  secret: ALK4wT)`v%_*$8FNR7V&
+  tokenExpiry: 60
+cors:
+  filter:
+    allowedorigins: '*'
+    allowedmethods: POST,PUT,GET,OPTIONS,DELETE
+    maxage: 3600
+    allowedheaders: X-Requested-With,X-Auth-Token,Content-Type
+cloud:
+  aws:
+    s3:
+      endpointUrl: https://unt-store-bkt.s3.amazonaws.com
+      accessKeyId: AKIAXUQRRHXVDB6QT3XR
+      secretKey: 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
+      bucketName: unt-store-bkt
+      region: us-east-1
+password:
+  strength: 5
+server:
+  servlet:
+    context-path: /api

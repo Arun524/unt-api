@@ -1,0 +1,48 @@
+spring:
+  datasource:
+    username: admin
+    password: Hope7465
+    url: jdbc:mysql://localhost/unt_store
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.spatial.dialect.mysql.MySQL8SpatialDialect
+    database-platform: org.hibernate.spatial.dialect.mysql.MySQL8SpatialDialect
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: kiraiwala22@gmail.com
+    password: Hope@123
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+jwt:
+  secret: ALK4wT)`v%_*$8FNR7V&
+  tokenExpiry: 60
+cors:
+  filter:
+    allowedorigins: '*'
+    allowedmethods: POST,PUT,GET,OPTIONS,DELETE
+    maxage: 3600
+    allowedheaders: X-Requested-With,X-Auth-Token,Content-Type
+cloud:
+  aws:
+    s3:
+      endpointUrl: https://unt-store.s3.amazonaws.com/
+      accessKeyId: AKIA5NEVAIKOURIQVKJM
+      secretKey: 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
+      bucketName: unt-store-bkt
+      region: us-east-1
+password:
+  strength: 5
